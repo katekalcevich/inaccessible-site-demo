@@ -1,3 +1,6 @@
+* This template has been modified from it's original source to make it more inaccessible for the purposes of demonstrating accessibility barriers. *
+
+
 Hyperspace by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
