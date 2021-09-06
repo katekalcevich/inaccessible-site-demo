@@ -130,13 +130,49 @@ Apply the slide animation to the carousel using CSS3 transforms.
 }
 
 .slide_img_01 {
-  background : url('../images/wee-lee-HOSjS6qIGAs-unsplash.jpeg') no-repeat center;
+  background : url('../../images/wee-lee-HOSjS6qIGAs-unsplash.jpeg') no-repeat center;
   background-size: cover;
   left: 0;
 }
 
 .slide_img_02 {
-  background : url('../images/ksenia-makagonova-V-TIPBoC_2M-unsplash.jpeg') no-repeat center;
+  background : url('../../images/ksenia-makagonova-V-TIPBoC_2M-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_03 {
+  background : url('../../images/carl-barcelo-nqUHQkuVj3c-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_04 {
+  background : url('../../images/dylan-gillis-YJdCZba0TYE-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_05 {
+  background : url('../../images/kaylee-garrett-GaprWyIw66o-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_06 {
+  background : url('../../images/anupam-mahapatra-Vz0RbclzG_w-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_07 {
+  background : url('../../images/anupam-mahapatra-Vz0RbclzG_w-unsplash.jpeg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_08 {
+  background : url('../../images/katie-bush-MKmM7SV-GiQ-unsplash.jpeg') no-repeat center;
   background-size : cover;
   left: 100%
 }
