@@ -101,3 +101,7 @@ img[tabindex="-1"]:focus {
   position: absolute;
   width: 1px;
 }
+
+js-carrousel__content img {
+  width: 100%;
+}
