@@ -7,172 +7,97 @@
   background: black;
 }
 
-/* carousel */
+/* ------------------ carrousel styles ------------------ */
+.relative { position: relative; }
+.mod--hidden { overflow: hidden; }
+.pb1 { padding-bottom: 1em; }
 
-.mySlider {
-  position : relative;
-  display : block;
-  overflow : hidden;
-  width : 100%;
-  max-width : 100vw;
-  height : 100vh;
-  max-height : 100%;
-  margin : 0 auto;
+.img-carrousel__container {
+  white-space: nowrap;
 }
-
-.slider {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  z-index: 0;
-  transition: transform 1600ms;
-  transform: scale(1);
-}
-
-.control {
-  position: absolute;
-  top: 50%;
-  margin-top: -24px;
-  z-index: 55;
-}
-
-.control label svg {
-  width : 48px;
-  height : 48px;
-  fill : #fff;
-  stroke : currentColor;
-  stroke-width : 0;
-}
-
-.control label svg:hover {
-  transition : all .2s ease;
-  fill : #000;
-}
-
-.control label {
-  z-index: 0;
+.img-carrousel__control__list {
   display: none;
-  cursor: pointer;
-  opacity: 0.5;
 }
 
-.control label:hover { opacity: 1.0; }
-
-.next { right: 1%; }
-
-.previous { left: 1%; }
-
-.slider-pagination {
+.img-carrousel__button-container {
   position: absolute;
-  bottom: 20px;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  z-index: 1000;
 }
-
-.slider-pagination label {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  background: rgba(255,255,255,0.2);
-  margin: 0 2px;
-  border: solid 1px rgba(255,255,255,0.4);
+.img-carrousel__button__previous {
+  top: 50%;
+  margin-top: -18px;
+  left: 0;
+  margin-left: 35px;
+  z-index: 100;
+}
+.img-carrousel__button__next {
+  top: 50%;
+  margin-top: -18px;
+  right: 0;
+  margin-right: 35px;
+  z-index: 100;
+}
+.img-carrousel__button__button {
+  margin: 0;
+  padding: .5em .25em .25em;
+  background: rgba(244, 249, 238, .7);
+  border-radius: 4px;
+  border: 0;
   cursor: pointer;
 }
-
-.slide-radio1:checked ~ .next .numb2, .slide-radio2:checked ~ .next .numb1, .slide-radio2:checked ~ .previous .numb1, .slide-radio1:checked ~ .previous .numb2 {
-  display: block;
-  z-index: 1
+img[tabindex="-1"]:focus {
+  outline: none;
 }
 
-.slide-radio1:checked ~ .slider-pagination .page1, .slide-radio2:checked ~ .slider-pagination .page2 { background: rgba(255,255,255,1) }
-Apply the slide animation to the carousel using CSS3 transforms.
-
-.slide-radio1:checked ~ .slider { transform: translateX(0%); }
-
-.slide-radio2:checked ~ .slider { transform: translateX(-100%); }
-
-@media only screen and (max-width: 767px) {
-
-    .mySlider {
-      position : relative;
-      width : 100%;
-      height : 400px;
-    }
-
-    .slider > div { padding: 0 2% }
-
-    .control {
-      position: absolute;
-      top: 60%;
-      margin-top: -24px;
-      z-index: 55;
-    }
-
-    .control label svg {
-      width : 32px;
-      height : 32px;
-      fill : #fff;
-      stroke : currentColor;
-      stroke-width : 0;
-    }
+/* ------------------ transition fade ------------------ */
+.fade .carrousel__content {
+    -webkit-animation: fadein 1s;
+    animation:         fadein 1s;
+    white-space: normal;
+}
+.fade .carrousel__content[aria-hidden=true] {
+    -webkit-animation: fadeout 1s;
+    animation:         fadeout 1s;
+}
+.fade .carrousel__content[aria-hidden=true] {
+    display: none;
 }
 
-.slide_img_01 {
-  background : url('../../images/wee-lee-HOSjS6qIGAs-unsplash.jpeg') no-repeat center;
-  background-size: cover;
+@-webkit-keyframes fadeout {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+@keyframes fadeout {
+    0%   { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+    100% { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+}
+
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+@keyframes fadein {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
   left: 0;
+  color: #f4f9ee;
+  background: rgba(45, 49, 50, .7);
+  z-index: 100;
+  padding: .5em;
+  margin: 0;
 }
 
-.slide_img_02 {
-  background : url('../../images/ksenia-makagonova-V-TIPBoC_2M-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_03 {
-  background : url('../../images/carl-barcelo-nqUHQkuVj3c-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_04 {
-  background : url('../../images/dylan-gillis-YJdCZba0TYE-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_05 {
-  background : url('../../images/kaylee-garrett-GaprWyIw66o-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_06 {
-  background : url('../../images/anupam-mahapatra-Vz0RbclzG_w-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_07 {
-  background : url('../../images/anupam-mahapatra-Vz0RbclzG_w-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
-}
-
-.slide_img_08 {
-  background : url('../../images/katie-bush-MKmM7SV-GiQ-unsplash.jpeg') no-repeat center;
-  background-size : cover;
-  left: 100%
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
