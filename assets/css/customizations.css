@@ -7,6 +7,10 @@
   background: black;
 }
 
+.contact li {
+  height: 4rem;
+}
+
 /* ------------------ carrousel styles ------------------ */
 .relative { position: relative; }
 .mod--hidden { overflow: hidden; }
