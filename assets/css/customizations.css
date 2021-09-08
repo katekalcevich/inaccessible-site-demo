@@ -7,7 +7,7 @@
   background: black;
 }
 
-.contact li {
+ul.contact > li {
   height: 4rem;
 }
 
