@@ -159,7 +159,7 @@
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" onclick="return false;" class="button submit" id="submit">Send Message</a></li>
+											<li><a href="javascript: void(0)" class="button submit" id="submit">Send Message</a></li>
 										</ul>
 									</form>
 								</section>
@@ -251,6 +251,7 @@
 			statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
 			fieldEmail.style.border = '3px solid red';
 			fieldEmail.style.border = '3px solid red';
+			return: false;
 		      }
 		    </script>
 	
