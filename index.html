@@ -143,25 +143,23 @@
 							<div id="statusMsg"></div>
 							<div>
 								<section>
-									<form>
-										<div class="fields">
-											<div class="field half">
-												Name
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												Email
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												Message
-												<textarea name="message" id="message" rows="5" placeholder="Enter at least 50 characters"></textarea>
-											</div>
+									<div class="fields">
+										<div class="field half">
+											Name
+											<input type="text" name="name" id="name" />
 										</div>
-										<ul class="actions">
-											<li><a class="button submit" id="submit">Send Message</a></li>
-										</ul>
-									</form>
+										<div class="field half">
+											Email
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											Message
+											<textarea name="message" id="message" rows="5" placeholder="Enter at least 50 characters"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><a class="button submit" id="submit">Send Message</a></li>
+									</ul>
 								</section>
 							</div>
 							<div class="split">
@@ -237,7 +235,6 @@
 		<script src="assets/js/main.js"></script>
 
 		    <script>
-
 		      var formSubmit = document.getElementById("submit"),
 			  statusMsg = document.getElementById("statusMsg"),
 			  fieldName = document.getElementById("name"),
@@ -251,7 +248,6 @@
 			statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
 			fieldName.style.border = '3px solid red';
 			fieldEmail.style.border = '3px solid red';
-			return false;
 		      }
 		    </script>
 	
