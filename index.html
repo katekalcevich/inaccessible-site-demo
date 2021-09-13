@@ -154,7 +154,7 @@
 										</div>
 										<div class="field">
 											Message
-											<textarea name="message" id="message" rows="5" placeholder="Enter at least 50 characters"></textarea>
+											<textarea name="message" id="message" rows="5"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -245,9 +245,22 @@
 
 		      // show two errors on the page (this function demos error messaging only - it doesn't actually check for errors)
 		      function showError() {
-			statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
-			fieldName.style.border = '3px solid red';
-			fieldEmail.style.border = '3px solid red';
+			if (fieldName == "" || fieldEmail = "" || fieldMessage = "") {
+			  statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
+			}
+			if (fieldName == "") {
+			  fieldName.style.border = '3px solid red';
+			}
+			if (fieldEmail == "") {
+			  fieldEmail.style.border = '3px solid red';
+			}
+			if (fieldMessage == "") {
+			  fieldMessage.style.border = '3px solid red';
+			}
+			if (fieldMessage.value.length < 50) {
+			  statusMsg.innerHTML = "You must include at least 50 characters in your message.";
+			  fieldMessage.style.border = '3px solid red';
+			}
 		      }
 		    </script>
 	
