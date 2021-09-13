@@ -245,16 +245,16 @@
 
 		      // show two errors on the page (this function demos error messaging only - it doesn't actually check for errors)
 		      function showError() {
-			if (fieldName == "" || fieldEmail = "" || fieldMessage = "") {
+			if (fieldName.value == "" || fieldEmail.value = "" || fieldMessage.value = "") {
 			  statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
 			}
-			if (fieldName == "") {
+			if (fieldName.value == "") {
 			  fieldName.style.border = '3px solid red';
 			}
-			if (fieldEmail == "") {
+			if (fieldEmail.value == "") {
 			  fieldEmail.style.border = '3px solid red';
 			}
-			if (fieldMessage == "") {
+			if (fieldMessage.value == "") {
 			  fieldMessage.style.border = '3px solid red';
 			}
 			if (fieldMessage.value.length < 50) {
