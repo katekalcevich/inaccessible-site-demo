@@ -21,7 +21,7 @@ ul.contact > li {
   width: 1px;
 }
 
-#skip a {
+#skip {
   position:absolute;
   left:-10000px;
   top:auto;
@@ -30,7 +30,7 @@ ul.contact > li {
   overflow:hidden;
 }
  
-#skip a:focus {
+#skip:focus {
   position:static;
   width:auto;
   height:auto;
