@@ -99,7 +99,55 @@
 								  <td>Yin Yoga</td>
 								</tr>
 							      </table>
-                            
+					</section>
+					<section id="two">
+						<h2>Purchase a six-class pass</h2>
+						<p>Class passes are non-refundable and expire after 6 months. You can switch your class by calling us, if space is available.</p>
+						<div id="statusMsg"></div>
+						<div class="form">
+							<section>
+								<div class="fields">
+									<div class="field half">
+										Name
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										Email
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										Class
+										<select name="class" value="class">
+											<option value="Ashtanga Yoga">Ashtanga Yoga</option>
+											<option value="Bikram Yoga">Bikram Yoga</option>
+											<option value="Vinyasa Yoga">Vinyasa Yoga</option>
+											<option value="Hot Yoga">Hot Yoga</option>
+											<option value="Yin Yoga">Yin Yoga</option>
+											<option value="Adaptive">Adaptive</option>
+										</select>
+									</div>
+									<div class="field">
+										Credit card number
+										<input type="text" name="credit" id="credit" />
+									</div>
+									<div class="field">
+										Name on card
+										<input type="text" name="creditName" id="creditName" />
+									</div>
+									<div class="field half">
+										Expiry
+										<input type="text" name="month" id="month" size="2" />
+									</div>
+									<div class="field half">
+										<br>
+										<input type="text" name="year id="year" size="2" />
+									</div>
+								</div>
+								<ul class="actions">
+									<li><a class="button submit" id="submit">Buy class pass</a></li>
+								</ul>
+							</section>
+						</div>
 						  <br><h2 class="align-center">Sample adaptive class therapeutic flow</h2>
 						  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/541394194?h=bd72fb8c80&autoplay=1&color=493382&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 						</section>
@@ -125,5 +173,35 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		    <script>
+		      var formSubmit = document.getElementById("submit"),
+			  statusMsg = document.getElementById("statusMsg"),
+			  fieldName = document.getElementById("name"),
+			  fieldEmail = document.getElementById("email"),
+			  fieldMessage = document.getElementById("message");
+
+		      formSubmit.addEventListener("click", showError, false);
+
+		      // show two errors on the page (this function demos error messaging only - it doesn't actually check for errors)
+		      function showError() {
+			if (fieldName.value.length < 1 || fieldEmail.value.length < 1 || fieldMessage.value.length < 1) {
+			  statusMsg.innerHTML = "There are errors in the form. Please fix the fields with a red border and resubmit the form.";
+			}
+			if (fieldName.value.length < 1) {
+			  fieldName.style.border = '3px solid red';
+			}
+			if (fieldEmail.value.length < 1) {
+			  fieldEmail.style.border = '3px solid red';
+			}
+			if (fieldMessage.value.length < 1) {
+			  fieldMessage.style.border = '3px solid red';
+			}
+			if (fieldMessage.value.length < 50) {
+			  statusMsg.innerHTML = "You must include at least 50 characters in your message.";
+			  fieldMessage.style.border = '3px solid red';
+			}
+		      }
+		    </script>
+	
 	</body>
 </html>
